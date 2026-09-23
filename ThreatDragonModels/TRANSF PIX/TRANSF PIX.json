@@ -643,11 +643,13 @@
                 "text": "DB contas"
               },
               "topLine": {
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               },
               "bottomLine": {
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -744,13 +746,40 @@
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "isALog": false,
               "isEncrypted": false,
               "isSigned": false,
-              "storesCredentials": false,
+              "storesCredentials": true,
               "storesInventory": false,
-              "threats": []
+              "threats": [
+                {
+                  "id": "6600329b-0282-495e-a36f-649d83005427",
+                  "title": "SQL Injection",
+                  "status": "Open",
+                  "severity": "Critical",
+                  "type": "Adulteração",
+                  "description": "Injeção de comandos SQL provenientes do atacante",
+                  "mitigation": "utilizar querys seguindo o preparedstatement\naplicar validações OWASP no WAF\nValidação de input do usuario\nLiberar lista de caracteres permitidos",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 2,
+                  "score": "9.9"
+                }
+              ],
+              "threatFrequency": {
+                "tampering": 1,
+                "repudiation": 0,
+                "informationDisclosure": 0,
+                "denialOfService": 0
+              }
+            },
+            "tools": {
+              "items": [
+                "boundary",
+                "button-remove"
+              ],
+              "name": null
             }
           },
           {
@@ -767,11 +796,13 @@
                 "text": "Log auditoria"
               },
               "topLine": {
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               },
               "bottomLine": {
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -868,13 +899,27 @@
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
-              "isALog": false,
+              "hasOpenThreats": true,
+              "isALog": true,
               "isEncrypted": false,
               "isSigned": false,
               "storesCredentials": false,
               "storesInventory": false,
-              "threats": []
+              "threats": [
+                {
+                  "id": "4cead346-ab1c-4718-8542-0bfb1e5e3c42",
+                  "title": "Nova ameaça STRIDE",
+                  "status": "Open",
+                  "severity": "TBD",
+                  "type": "Adulteração",
+                  "description": "Forneça uma descrição para esta ameaça",
+                  "mitigation": "Forneça uma mitigação para esta ameaça ou a ração para o status N/A",
+                  "modelType": "STRIDE",
+                  "new": true,
+                  "number": 3,
+                  "score": ""
+                }
+              ]
             }
           },
           {
@@ -1308,23 +1353,13 @@
               "cell": "8294320b-1665-4a26-a824-cf60b22b050f",
               "port": "27ae0650-d677-4917-a5cb-58bb391c6937"
             },
-            "vertices": [],
-            "tools": {
-              "items": [
-                "boundary",
-                "button-remove",
-                "vertices",
-                "source-arrowhead",
-                "target-arrowhead"
-              ],
-              "name": null
-            }
+            "vertices": []
           }
         ]
       }
     ],
     "diagramTop": 1,
     "reviewer": "",
-    "threatTop": 1
+    "threatTop": 3
   }
 }
